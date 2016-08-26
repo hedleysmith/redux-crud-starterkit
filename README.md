@@ -2,8 +2,8 @@ Redux CRUD Starterkit
 =====================
 
 __Frontend:__
-[![Dependency Status](https://david-dm.org/hedleysmith/redux-crud-example.svg?path=frontend)](https://david-dm.org/hedleysmith/redux-crud-example?path=frontend) __Backend:__
-[![Dependency Status](https://david-dm.org/hedleysmith/redux-crud-example.svg?path=backend)](https://david-dm.org/hedleysmith/redux-crud-example?path=backend)
+[![Dependency Status](https://david-dm.org/hedleysmith/redux-crud-starterkit.svg?path=frontend)](https://david-dm.org/hedleysmith/redux-crud-starterkit?path=frontend) __Backend:__
+[![Dependency Status](https://david-dm.org/hedleysmith/redux-crud-starterkit.svg?path=backend)](https://david-dm.org/hedleysmith/redux-crud-starterkit?path=backend)
 
 __Redux starterkit with full CRUD & microservice capabilities!__
 
