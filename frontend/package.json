@@ -27,7 +27,7 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.15.0",
     "postcss-color-function": "^2.0.1",
-    "postcss-loader": "^0.10.1",
+    "postcss-loader": "^0.11.0",
     "postcss-mixins": "^5.0.1",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^3.0.0",
