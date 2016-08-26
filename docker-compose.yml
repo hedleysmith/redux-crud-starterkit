@@ -1,0 +1,43 @@
+# MongoDB Data Container
+# This is a 'data volume container' for the MongoDB database.
+mongodb-data:
+  image: mongo:3.3.9
+  command: /dev/null
+  volumes:
+    - /data/db
+
+# MongoDB Container
+# The main MongoDB container, uses the volume associated with the mongodb-data
+# container.
+mongodb:
+  image: mongo:3.3.9
+  command: mongod
+  volumes_from:
+    - mongodb-data
+
+# Backend
+# Mounts the app as a volume and installs packages so we can develop locally
+backend:
+  build: ./backend
+  volumes:
+    - ./backend:/src/app
+  working_dir: /src/app
+  command: bash -c "npm install && npm run start"
+  ports:
+   - "3001:3001"
+  links:
+    - mongodb:mongodb
+  restart: on-failure
+
+# Frontend
+# Mounts the app as a volume and installs packages so we can develop locally
+frontend:
+  build: ./frontend
+  volumes:
+    - ./frontend:/src/app
+  ports:
+    - "3002:3002"
+  command: bash -c "npm install && npm run start-development"
+  links:
+    - backend:backend
+  restart: on-failure

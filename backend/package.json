@@ -1,0 +1,17 @@
+{
+  "name": "redux-crud-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Redux CRUD example app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -L --watch /src/app/ /src/app/index.js"
+  },
+  "author": "Hedley Smith <mail@hedleysmith.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.4"
+  }
+}

@@ -1,0 +1,7 @@
+.itemList {
+  margin-bottom: 2rem;
+}
+
+.heading {
+  @mixin primaryHeader;
+}

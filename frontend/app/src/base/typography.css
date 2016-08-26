@@ -1,0 +1,31 @@
+@import "./colours.css";
+
+$primaryColourLighter: color(blue lightness(50%));
+
+body {
+  background-color: #FAFAFA;
+  font-family: "Open Sans", helvetica, arial;
+}
+
+:global(.main-title) {
+  color: #999;
+}
+
+h1 {
+  color: $primaryColourLighter;
+}
+
+.test2 {
+  color: blue;
+}
+
+p {
+  .test {
+    color: blue;
+  }
+}
+
+@define-mixin primaryHeader {
+  font-size: 3rem;
+  text-transform: uppercase;
+}

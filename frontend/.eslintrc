@@ -1,0 +1,9 @@
+{
+  "extends" : [
+    "airbnb"
+  ],
+  "rules": {
+    // Rule overrides
+    "react/jsx-filename-extension": 0, // Allow .react.js file extension
+  }
+}

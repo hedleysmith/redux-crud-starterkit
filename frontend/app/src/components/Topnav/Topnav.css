@@ -1,0 +1,15 @@
+.wrapper {
+  background-color: rgba(0,0,0,0.9);
+  color: #FFF;
+  padding: .25rem .5rem;
+  a {
+    display: inline-block;
+    &:link,
+    &:visited {
+      color: #FFF;
+    }
+    &:hover {
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
+}
