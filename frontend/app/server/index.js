@@ -10,8 +10,8 @@ if (config.env === 'development') {
   const compiler = webpack(webpackConfig);
 
   // [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware)
-  // serves a compiled JS bundle in-memory, avoiding writing to disk it also
-  // watches for file changes and updates the file bundle.
+  // serves a compiled JS bundle in-memory, avoiding writing to disk. It also
+  // watches for file changes, updating the bundle.
   const webpackDevMiddleware = require('webpack-dev-middleware');
   app.use(webpackDevMiddleware(compiler, {
     noInfo: true,
