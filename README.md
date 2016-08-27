@@ -13,6 +13,7 @@ __Highlights:__
 
 * An Express.js based backend service that exposes a RESTful API with full __C(Create) R(Read) U(Update) D(Delete)__ capabilities.
 * A non-trival frontend built using React.js, Redux, Sagas and much more!
+* Ready to go production grade Docker configuration to manage both services through to deployment.
 
 Remember, this is just a starting point! All parts of the app are designed to be switched out fairly easily if you prefer other technologies.
 
@@ -57,4 +58,4 @@ __Automated Testing__
 
 ## TODO
 
-* Document environment configurations (production, development, testing & mock modes)
+* Document environment configurations (production, development, testing & mock modes).
