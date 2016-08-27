@@ -98,6 +98,14 @@ if (config.env === 'production') {
         'process.env': {
           NODE_ENV: JSON.stringify(process.env.NODE_ENV),
         },
+        API_MODE: JSON.stringify(config.API_MODE),
+        API_ROOT: JSON.stringify(config.API_ROOT),
+      }),
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          screw_ie8: true,
+          warnings: false,
+        },
       }),
     ],
   };
