@@ -3,7 +3,7 @@ FROM node:6.5.0
 MAINTAINER Hedley Smith <mail@hedleysmith.com>
 
 # Prepare the container.
-RUN apt-get update && apt-get install -y vim
+RUN apt-get update && apt-get install -y vim \
     && rm -rf /var/lib/apt/lists/*
 
 # Install node modules before app code to take advantage of docker layer caching.
@@ -17,6 +17,7 @@ RUN mkdir -p /src/app && cp -a /tmp/node_modules /src/ && rm -rf /tmp/node_modul
 WORKDIR /src
 ADD app /src/app
 ADD package.json /src/package.json
+ADD .babelrc /src/.babelrc
 
 # Run the application.
 CMD ["npm", "run", "start-production"]

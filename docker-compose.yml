@@ -34,10 +34,12 @@ backend:
 frontend:
   build: ./frontend
   volumes:
-    - ./frontend:/src/app
+    - ./frontend/app:/src/app
+    - ./frontend/package.json:/src/package.json
+    - ./frontend/.babelrc:/src/.babelrc
   ports:
-    - "3002:3002"
-  command: bash -c "npm install && npm run start-development"
+    - "3010:3010"
+  command: bash -c "npm install && npm run start-dev"
   links:
     - backend:backend
   restart: on-failure
