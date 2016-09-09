@@ -1,5 +1,5 @@
 # Use the docker/node base image
-FROM node:6.2
+FROM node:6.5.0
 MAINTAINER Hedley Smith <mail@hedleysmith.com>
 
 # Prepare the container.

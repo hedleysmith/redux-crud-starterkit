@@ -1,5 +1,5 @@
 # Use the docker/node base image
-FROM node:6.3.0
+FROM node:6.5.0
 MAINTAINER Hedley Smith <mail@hedleysmith.com>
 
 # Define where our application lives and copy over sources
