@@ -101,6 +101,8 @@ if (config.env === 'production') {
         API_MODE: JSON.stringify(config.API_MODE),
         API_ROOT: JSON.stringify(config.API_ROOT),
       }),
+      new webpack.NoErrorsPlugin(),
+      new webpack.optimize.OccurrenceOrderPlugin(),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
           screw_ie8: true,
