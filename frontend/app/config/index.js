@@ -28,7 +28,7 @@ config.AUTH_API = process.env.AUTH_API || 'TODO: Auth API details';
 // - mock = load data from local mock JSON file served by this app.
 // - development = load data from local backend server.
 // - production = production server details.
-config.API_MODE = process.env.AUTH_MODE || 'mock';
+config.API_MODE = process.env.AUTH_MODE || 'development';
 
 // API_ROOT the first part of the URL for backend API calls.
 if (config.env === 'production') {

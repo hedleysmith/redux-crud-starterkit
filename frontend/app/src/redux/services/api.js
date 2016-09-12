@@ -34,8 +34,21 @@ export { API };
 const apiService = {};
 
 // Items.
-apiService.itemCreate = (id) => {
-  // TODO.
+apiService.itemCreate = (data) => {
+  if (API_MODE === 'mock') {
+    // TODO Implement mock mode for create operations.
+  }
+
+  return fetch(API.API_ITEMS, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data.item),
+  })
+  .then(response => response.json())
+  .then(json => json);
 };
 
 apiService.itemFetch = () => {
@@ -57,6 +70,10 @@ apiService.itemUpdate = (itemData) => {
 
   return fetch(API.API_ITEMS + '/' + itemData.id, {
     method: 'PATCH',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify(itemData.update),
   })
   .then(response => response.json())
@@ -64,7 +81,20 @@ apiService.itemUpdate = (itemData) => {
 };
 
 apiService.itemDelete = (id) => {
-  // TODO.
+  if (API_MODE === 'mock') {
+    return new Promise((resolve, reject) => {
+      if (Math.random() < 0.2) {
+        reject(new Error('Failed to fetch! 20% of fetches set to fail :('));
+      }
+      resolve('Success!');
+    });
+  }
+
+  return fetch(API.API_ITEMS + '/' + id, {
+    method: 'DELETE',
+  })
+  .then(response => response.json())
+  .then(json => json);
 };
 
 // Other entities would go here...

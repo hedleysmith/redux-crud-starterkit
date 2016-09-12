@@ -3,8 +3,9 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import Item from '../../components/Item/Item.react.js';
 import styles from './ItemList.css';
+import Item from '../../components/Item/Item.react.js';
+import ItemCreate from '../../components/ItemCreate/ItemCreate.react.js';
 
 class ItemList extends Component {
   render() {
@@ -17,7 +18,7 @@ class ItemList extends Component {
       items.forEach((item, index) => {
         allItems.push(
           <Item
-            key={item.id}
+            key={item._id}
             itemData={item}
             arrayKey={index}
           />
@@ -27,8 +28,9 @@ class ItemList extends Component {
 
     return (
       <div>
-        <h1 className={styles.heading}>Item List</h1>
-      { allItems }
+        <h1 className={styles.heading}>Item Stream</h1>
+        <ItemCreate />
+        { allItems }
       </div>
     );
   }

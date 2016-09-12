@@ -33,16 +33,14 @@ mongoose.connect('mongodb://mongodb:27017/reduxcrud');
 
 // Load routes
 var test = require('./routes/test');
-var posts = require('./routes/posts');
-//var tags = require('./routes/tags');
+var items = require('./routes/items');
 
 // Use routes in app, prefixed with /api/v1
 app.use('/', test);
-app.use('/api/v1/posts', posts);
-//app.use('/api/v1/tags', tags);
+app.use('/api/v1/items', items);
 
 // Start the server
 var server = app.listen(3001, function() {
   var port = server.address().port;
-  console.log('Example app listening at http://localhost:%s', port);
+  console.log('Redux CRUD Starterkit backend listening at http://localhost:%s', port);
 });
