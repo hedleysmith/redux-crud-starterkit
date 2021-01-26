@@ -1,4 +1,0 @@
-app/public/**
-node_modules/**
-test/**
-app/src/*.spec.js
